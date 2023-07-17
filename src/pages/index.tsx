@@ -1,5 +1,8 @@
-import Hero from "@/components/hero";
 import Head from "next/head";
+import Hero from "@/components/hero/Hero";
+import About from "@/components/about/About";
+import Footer from "@/components/footer/Footer";
+import Places from "@/components/places/Places";
 
 export default function Home() {
   return (
@@ -12,6 +15,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero />
+      <About />
+      <Places />
+      <Footer bgcolor="black" topMargin="6em" />
     </>
   );
 }
