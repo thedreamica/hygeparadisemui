@@ -63,7 +63,7 @@ const Places = () => {
     return (
       <Box style={{ ...style }} onClick={onClick}>
         <ArrowForwardIcon
-          sx={{ ...arrowStyles, right: { xs: "3em", md: "-1.5em" } }}
+          sx={{ ...arrowStyles, right: { xs: "3em", md: "-1em" } }}
         />
       </Box>
     );
@@ -73,7 +73,7 @@ const Places = () => {
     return (
       <Box style={{ ...style }} onClick={onClick}>
         <ArrowBackIcon
-          sx={{ ...arrowStyles, left: { xs: "3em", md: "-1.5em" } }}
+          sx={{ ...arrowStyles, left: { xs: "3em", md: "-1em" } }}
         />
       </Box>
     );
@@ -111,6 +111,7 @@ const Places = () => {
           textAlign: { xs: "center", md: "left" },
           fontWeight: "600",
           mb: { xs: "1.7em", md: ".8em" },
+          ml: { xs: "0", md: "1em" },
         }}
       >
         PLACES TO VISIT
@@ -118,12 +119,22 @@ const Places = () => {
       <Slider {...settings}>
         {placesData.map((item) => {
           return (
-            <Box key={item.id} sx={{ mt: { xs: "1.3em", md: 0 } }}>
+            <Box
+              key={item.id}
+              sx={{
+                mt: { xs: "1.3em", md: 0 },
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
               <Box
                 sx={{
-                  width: { xs: "100%", md: "100%" },
-                  height: { xs: "350px", md: "450px" },
+                  width: { xs: "100%", md: "85%" },
+                  height: { xs: "350px", md: "420px" },
                   position: "relative",
+                  mx: "auto",
+                  display: "flex",
+                  justifyContent: "space-between",
                 }}
               >
                 <Image src={item.img} alt={item.title} fill={true} />

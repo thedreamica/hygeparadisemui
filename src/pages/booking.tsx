@@ -40,6 +40,9 @@ const booking = () => {
     "& .MuiOutlinedInput-notchedOutline": {
       borderColor: "white !important",
     },
+    "& .css-nxo287-MuiInputBase-input-MuiOutlinedInput-input": {
+      bgcolor: "red",
+    },
   };
 
   const theme = useTheme();
@@ -66,7 +69,7 @@ const booking = () => {
       />
       <Navbar />
       <SocialLinks />
-      <Box sx={{ my: "em", px: { xs: "3.5em", md: "20em" } }}>
+      <Box sx={{ px: { xs: "3.5em", md: "20em" } }}>
         <Typography
           variant="h3"
           sx={{
@@ -76,6 +79,7 @@ const booking = () => {
             fontSize: { xs: "2.1em", md: "3em" },
             fontWeight: "600",
             color: "white",
+            mt: { xs: "1em", md: "0" },
           }}
         >
           booking
@@ -86,15 +90,13 @@ const booking = () => {
             display: "flex",
             justifyContent: { xs: "center", md: "center" },
             flexDirection: { xs: "column", md: "row" },
-            my: "1.5em",
-            gap: { xs: "0em", md: "3em" },
+            gap: { xs: "0", md: "3em" },
+            my: { xs: "1em", md: "3.2em" },
             height: "auto",
           }}
         >
           {/* dates */}
-          <Box>
-            <Dates />
-          </Box>
+          <Dates />
           <Box sx={{ display: { xs: "none", md: "block" } }}>
             <Carousel />
           </Box>
@@ -130,6 +132,14 @@ const booking = () => {
               <FormControl sx={inputStyles} fullWidth>
                 <InputLabel>Select your room</InputLabel>
                 <Select
+                  sx={{
+                    "& .css-hfutr2-MuiSvgIcon-root-MuiSelect-icon": {
+                      color: "white",
+                    },
+                    "& .css-bpeome-MuiSvgIcon-root-MuiSelect-icon": {
+                      color: "white",
+                    },
+                  }}
                   value={age}
                   label="Select your room"
                   onChange={handleChange}
@@ -164,10 +174,11 @@ const booking = () => {
             />
           </Box>
           <BasicModal />
-          
         </Box>
       </Box>
-      <Box sx={{ display: { xs: "block", md: "none" }, mx: "1.3em" }}>
+      <Box
+        sx={{ display: { xs: "block", md: "none" }, mx: "1.3em", my: "3em" }}
+      >
         <Carousel />
       </Box>
       <Copyrights display="none" />

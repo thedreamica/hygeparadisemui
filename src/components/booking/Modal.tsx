@@ -14,15 +14,16 @@ const style = {
   bgcolor: "black",
   border: "2px solid #000",
   boxShadow: 24,
-  py: "15em",
-  px: "10em",
+  py: { xs: "5em", md: "15em" },
+  px: { xs: ".5em", md: "10em" },
   color: "white",
   textAlign: "center",
+  width: { xs: "100%", md: "auto" },
 };
 const textStyles = {
   my: "1em",
   md: "1.1em",
-  fontSize: { xs: "1em", md: "1.2em" },
+  fontSize: { xs: ".8em", md: "1.2em" },
   fontWeight: "500",
   width: "100%",
 };
@@ -76,19 +77,19 @@ export default function BasicModal() {
       >
         <Box sx={style}>
           <CloseIcon
-          onClick={handleClose}
+            onClick={handleClose}
             sx={{
-              fontSize: { xs: "1em", md: "2em" },
+              fontSize: { xs: "1.5em", md: "2em" },
               color: "white",
-              top: "1em",
-              right: "1em",
+              top: { xs: ".8em", md: "1em" },
+              right: { xs: ".8em", md: "1em" },
               position: "absolute",
               cursor: "pointer",
             }}
           />
           <Typography
             sx={{
-              fontSize: { xs: "1em", md: "3em" },
+              fontSize: { xs: "2em", md: "3em" },
               fontWeight: "600",
               mb: "1em",
             }}
