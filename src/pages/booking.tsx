@@ -10,9 +10,10 @@ import {
   SelectChangeEvent,
   TextField,
   Typography,
-  useMediaQuery,
-  useTheme,
+  useMediaQuery
 } from "@mui/material";
+
+import { useTheme } from '@mui/material/styles';
 
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
@@ -24,8 +25,8 @@ import SocialLinks from "@/components/socialLinks/SocialLinks";
 import Dates from "@/components/booking/Dates";
 import BasicModal from "@/components/booking/Modal";
 
-const booking = () => {
-  const [age, setAge] = React.useState("");
+const Booking = () => {
+  const [age, setAge] = useState("");
   const handleChange = (event: SelectChangeEvent) => {
     setAge(event.target.value as string);
   };
@@ -186,4 +187,4 @@ const booking = () => {
   );
 };
 
-export default booking;
+export default Booking;

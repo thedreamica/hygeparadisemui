@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Box, Typography } from "@mui/material";
 import CircleIcon from "@mui/icons-material/Circle";
 
-const carousel = () => {
+const Carousel = () => {
   const data = [
     {
       id: 1,
@@ -127,4 +127,4 @@ const carousel = () => {
   );
 };
 
-export default carousel;
+export default Carousel;

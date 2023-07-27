@@ -57,7 +57,7 @@ const Hero = () => {
     }
 
     return () => clearInterval(intervalId as NodeJS.Timeout);
-  }, [isPaused, heroData.length]);
+  }, [isPaused]);
 
   return (
     <Box>

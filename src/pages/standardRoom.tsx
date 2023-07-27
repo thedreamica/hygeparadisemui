@@ -213,7 +213,7 @@ const standardRoom = () => {
               <Box sx={facilitiesBox}>
                 <CheckIcon sx={facilitiesIcon} />
                 <Typography sx={facilitiesTypo}>
-                  48" HD TV with more than 60 channels
+                  48 &quot; HD TV with more than 60 channels
                 </Typography>
               </Box>
               <Box sx={facilitiesBox}>
